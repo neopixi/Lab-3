@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
-from sqrEq import sqrEquation
+# from sqrEq import sqrEquation
 
 
 def close():
@@ -14,12 +14,12 @@ def calc():
     if A == 0.0:
         tk.messagebox.showwarning('Error', 'Division by zero!')
     else:
-        lbl_result.configure(text=sqrEquation(A, B, C))
+        lbl_result.configure(text=max(A, B, C))
 
 
 window = tk.Tk()
 window.geometry('576x360')
-bg_img = tk.PhotoImage(file='bg_pic.png')
+bg_img = tk.PhotoImage(file='bg.png')
 
 lbl_bg = tk.Label(window, image=bg_img)
 lbl_bg.place(x=0, y=0, relwidth=1, relheight=1)
